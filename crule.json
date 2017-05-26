@@ -1,0 +1,17 @@
+{
+    "fprint|printf|sprintf|snprintf|vfprintf|vprintf|vsprintf|vsnprintf": {
+        "warn": "well-crafted input that could change the behavior of the format function, permitting the attacker tocause denial of service or to execute arbitrary command", 
+        "sug": "Use a constant for the format specification", 
+        "type": "format"
+    }, 
+    "strcpy": {
+        "warn": "Does not check for buffer overflows when copying to destination", 
+        "sug": "Consider using strncpy or strlcpy (warning, strncpy is easily misused)", 
+        "type": "buffer"
+    }, 
+    "strncpy": {
+        "warn": "Yub that is bug, No null termination if size of src string is larger than size n", 
+        "sug": "check for size of src string always less than the size specified", 
+        "type": "buffer"
+    }
+}
